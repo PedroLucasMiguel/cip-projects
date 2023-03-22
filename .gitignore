@@ -1,2 +1,2 @@
 venv/
-src/benchmarkable_algorithms/__pycache__
+src/hill_climbing_simulated_annealing/benchmarkable_algorithms/__pycache__/*

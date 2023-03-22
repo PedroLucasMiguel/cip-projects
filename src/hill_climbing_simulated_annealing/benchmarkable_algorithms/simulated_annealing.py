@@ -10,7 +10,7 @@ class SimulatedAnnealing(BaseAlgorithm):
         self.deviation = deviation
         self.temperature = temperature
         self.max_iterations = max_iterations
-        self.x = None
+        self.x = []
     
     def __decrease_temperature(self):
         self.temperature = 0.8 * self.temperature
@@ -43,4 +43,7 @@ class SimulatedAnnealing(BaseAlgorithm):
     def run(self):
         x = self.__algorithm()
         print("Value of X: {} | g(x) = {}".format(x, self.evaluator(x)))
-        self.x = x
+        self.x.append(x)
+
+    def clean_memory(self):
+        self.x.clear()

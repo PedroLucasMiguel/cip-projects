@@ -10,7 +10,7 @@ class StochasticHillClimbing(BaseAlgorithm):
         self.deviation = deviation
         self.T = T
         self.max_iterations = max_iterations
-        self.x = None
+        self.x = []
     
     def __algorithm(self) -> float:
         x = random()
@@ -32,4 +32,7 @@ class StochasticHillClimbing(BaseAlgorithm):
     def run(self):
         x = self.__algorithm()
         print("Value of X: {} | g(x) = {}".format(x, self.evaluator(x)))
-        self.x = x
+        self.x.append(x)
+
+    def clean_memory(self):
+        self.x.clear()

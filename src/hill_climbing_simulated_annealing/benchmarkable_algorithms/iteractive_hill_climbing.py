@@ -9,7 +9,7 @@ class InteractiveHillClimbing(BaseAlgorithm):
         self.deviation = deviation
         self.max_iterations = max_iterations
         self.n_algorithm_interactions = n_algorithm_interactions
-        self.x = None
+        self.x = []
     
     def __hill_climbing(self) -> float:
         x = random()
@@ -43,4 +43,7 @@ class InteractiveHillClimbing(BaseAlgorithm):
     def run(self):
         x = self.__algorithm()
         print("Value of X: {} | g(x) = {}".format(x, self.evaluator(x)))
-        self.x = x
+        self.x.append(x)
+
+    def clean_memory(self):
+        self.x.clear()

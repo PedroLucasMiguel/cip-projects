@@ -8,7 +8,7 @@ class HillClimbing(BaseAlgorithm):
         self.evaluator = evaluator
         self.deviation = deviation
         self.max_iterations = max_iterations
-        self.x = None
+        self.x = []
     
     def __algorithm(self) -> float:
         x = random()
@@ -30,4 +30,7 @@ class HillClimbing(BaseAlgorithm):
     def run(self):
         x = self.__algorithm()
         print("Value of X: {} | g(x) = {}".format(x, self.evaluator(x)))
-        self.x = x
+        self.x.append(x)
+
+    def clean_memory(self):
+        self.x.clear()
