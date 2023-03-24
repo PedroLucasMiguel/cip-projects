@@ -7,6 +7,7 @@ from benchmarkable_algorithms.stochastic_hill_climbing import StochasticHillClim
 from benchmarkable_algorithms.simulated_annealing import SimulatedAnnealing
 from benchmarkable_algorithms.benchmark import Benchmark
 
+# TODO - Let those variables also be defined in the execution command
 MAX_ALGORITHM_ITERATIONS = 1000
 GAUSIAN_NOISE_DEVIATION = 0.01
 INTERACTIVE_ALGORITHM_INTERATIONS = 100
@@ -56,7 +57,7 @@ if __name__ == "__main__":
     plt.title("Mean execution time of all algorithms ({} executions)".format(BENCHMARK_N_EXECUTIONS))
     plt.ylabel("Time (ms)")
     plt.xlabel("Algorithm")
-    plt.savefig("foo.png")
+    plt.savefig("output/all.png")
 
     mean_times_ms.remove(np.max(mean_times_ms))
     algorithm_names.remove(ihc.__class__.__name__)
@@ -66,7 +67,7 @@ if __name__ == "__main__":
     plt.title("Mean execution time without Interactive Hill Climbing for better scale ({} executions)".format(BENCHMARK_N_EXECUTIONS))
     plt.ylabel("Time (ms)")
     plt.xlabel("Algorithm")
-    plt.savefig("bar.png")
+    plt.savefig("output/no_interactive_hc.png")
 
     best_x = algorithms[0].x[0]
     best_algorithm = ""

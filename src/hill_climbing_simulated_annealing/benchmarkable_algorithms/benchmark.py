@@ -14,7 +14,7 @@ class Benchmark:
         self.elapsed_time_ms = None
         pass
 
-    def run(self) -> float:
+    def run(self) -> None:
         print("================== Runing {} algorithm =========================".format(self.algorithm_name))
         start = time.time()
         self.algorithm_run()
@@ -26,7 +26,7 @@ class Benchmark:
         self.elapsed_time_ms = duration
         print("================== End of the benchmark =====================\n")
 
-    def run_multiple(self, n_runs:int = 10):
+    def run_multiple(self, n_runs:int = 10) -> None:
         if n_runs <= 0:
             raise InvalidNumberOfRunsException
 
