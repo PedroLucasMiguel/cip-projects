@@ -7,11 +7,11 @@ O projeto é organizado da seguinte forma:
 
 Dentro da pasta `src` você pode encontrar todos os exercícios que foram passados durante as aulas, cada uma das pastas irá conter um arquivo nomeado como `main.py` e será através dele que os algoritmos devem ser executados.
 
-Quanto ao resultado da execução dos algoritmos, será criada uma pasta chamada `outpup` na raiz do projeto executado, e lá serão encontrados os arquivos referentes a execução daquele exercício específico.
+Quanto ao resultado da execução dos algoritmos, será criada uma pasta chamada `output` na raiz do projeto executado, e lá serão encontrados os arquivos referentes a execução daquele exercício específico.
 
 ## Projetos presentes no repositório
 
-`hill_climbing_simulated_annealing` -> Algoritmo desenvolvido com o intuíto de mensurar o tempo de execução de várias variações do algoritmo de _Hill Climbing_, comparando o tempo de execução destes algoritmos em paralelo ao algoritmo de _Simulated Annealing_;
+`hill_climbing_simulated_annealing` -> Algoritmo desenvolvido com o intuito de mensurar o tempo de execução de várias variações do algoritmo de _Hill Climbing_, comparando o tempo de execução destes algoritmos em paralelo ao algoritmo de _Simulated Annealing_;
 
 # Como compilar o projeto
 Primeiro, recomendo que crie uma instância virtual do Python `>=` 3.10.X.
